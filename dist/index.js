@@ -3565,7 +3565,7 @@ exports.poll = (options) => __awaiter(void 0, void 0, void 0, function* () {
             repo,
             ref
         });
-        result.data.check_runs.forEach((check) => log(`Check: ${check}`));
+        result.data.check_runs.forEach((check) => log(`Check: ${JSON.stringify(check, null, 2)}`));
         yield wait_1.wait(intervalSeconds * 1000);
         now = new Date().getTime();
     }
